@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge, ChevronLeft, ChevronRight, Heart, MapPin, MessageCircle, Play, Smartphone, Star, Trophy, Users, Zap } from 'lucide-react'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
 const testimonials = [
@@ -102,11 +103,12 @@ const Testimonials = () => {
                                         <div className="relative p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-green-500/10 to-blue-500/10">
                                             <div className="relative">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-2xl"></div>
-                                                <img
+                                                <Image
+                                                    className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-green-400 shadow-2xl"
                                                     src={testimonials[currentTestimonial].image || "/placeholder.svg"}
                                                     alt={testimonials[currentTestimonial].name}
-                                                    className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-green-400 shadow-2xl"
-                                                />
+                                                    width={500} height={300} />
+
                                                 <div className="absolute -bottom-4 -right-4 bg-green-500 rounded-full p-3 shadow-lg">
                                                     <div className="flex items-center space-x-1">
                                                         <Star className="w-4 h-4 text-white fill-current" />
@@ -137,7 +139,7 @@ const Testimonials = () => {
                                                 </div>
 
                                                 <blockquote className="text-lg lg:text-xl text-slate-200 leading-relaxed italic border-l-4 border-green-400 pl-6">
-                                                    "{testimonials[currentTestimonial].text}"
+                                                    &quot;{testimonials[currentTestimonial].text}&quot;
                                                 </blockquote>
 
                                                 <div className="flex flex-wrap gap-3">
