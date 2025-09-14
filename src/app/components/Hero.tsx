@@ -148,7 +148,8 @@ export default function Hero() {
 
                         <motion.div
                             ref={statsRef}
-                            className="grid grid-cols-1 sm:grid-cols-3 pt-8"
+                            // className="grid grid-cols-1 sm:grid-cols-3 pt-8"
+                            className="flex justify-around items-center sm:justify-between md:w-2/3 pt-8"
                             initial="hidden"
                             animate={controls}
                             variants={{
@@ -157,7 +158,7 @@ export default function Hero() {
                             }}
                         >
                             <motion.div
-                                className="text-start"
+                                className="text-center sm:text-start"
                                 variants={{
                                     hidden: { opacity: 0, y: 15 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -166,10 +167,11 @@ export default function Hero() {
                                 <div className="text-xl font-bold text-green-400">
                                     +{alunos.toLocaleString()}
                                 </div>
-                                <div className="text-gray-400">alunos treinando</div>
+                                <div className="text-gray-400">alunos
+                                </div>
                             </motion.div>
                             <motion.div
-                                className="text-start"
+                             className="text-center sm:text-start"
                                 variants={{
                                     hidden: { opacity: 0, y: 15 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -179,7 +181,7 @@ export default function Hero() {
                                 <div className="text-gray-400">os objetivos</div>
                             </motion.div>
                             <motion.div
-                                className="text-start"
+                              className="text-center sm:text-start"
                                 variants={{
                                     hidden: { opacity: 0, y: 15 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
