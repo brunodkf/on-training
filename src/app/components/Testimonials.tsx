@@ -11,7 +11,7 @@ const testimonials = [
         name: "Cliente Satisfeito",
         age: 35,
         location: "Barra da Tijuca, RJ",
-        image: "/fitness-man-muscular.jpg",
+        image: "/dep01.jpg",
         rating: 5,
         text: "Excelente profissional! Comecei a treinar com Anderson, por conta das dores na coluna, com muita técnica, profissionalismo, eliminamos 18 kilos. Hoje, livre das dores, não consigo mais parar de treinar. Super indico!",
         results: "18kg perdidos + Dores eliminadas",
@@ -22,7 +22,7 @@ const testimonials = [
         name: "Aluna Transformada",
         age: 28,
         location: "Barra da Tijuca, RJ",
-        image: "/fitness-woman-smiling.jpg",
+        image: "/dep02.jpg",
         rating: 5,
         text: "Quando começamos, eu nem percebia o tamanho que eu estava. Hoje, ver essa calça larga em mim é surreal. Obrigada por todo apoio, paciência e orientação — o resultado está aí, visível e transformador!",
         results: "Transformação corporal completa",
@@ -33,7 +33,7 @@ const testimonials = [
         name: "Aluna Fiel",
         age: 32,
         location: "Barra da Tijuca, RJ",
-        image: "/fitness-woman-mature.jpg",
+        image: "/dep03.jpg",
         rating: 5,
         text: "Desde 2023, venho treinando semanalmente com o Anderson, e posso dizer que foi uma das melhores decisões que tomei. Nesse tempo, meu corpo se transformou — hoje tenho o corpo que sempre sonhei, e isso só foi possível graças ao acompanhamento atento e personalizado do Anderson.",
         results: "Corpo dos sonhos alcançado",
@@ -80,10 +80,10 @@ const Testimonials = () => {
     }
 
     return (
-        <section id="depoimentos" className="py-20 bg-gradient-to-br from-slate-800/50 to-slate-900/50">
+        <section id="depoimentos" className="py-20 bg-black bg-gradient-to-br from-slate-800/50 to-slate-900/50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+                    <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
                         DEPOIMENTOS DOS MEUS <span className="text-green-400">ALUNOS</span>
                     </h2>
                     <p className="text-slate-300 text-xl max-w-2xl mx-auto leading-relaxed">
@@ -99,12 +99,12 @@ const Testimonials = () => {
                                     className={`transition-all duration-300 ease-in-out ${isTransitioning ? "opacity-0 transform scale-95" : "opacity-100 transform scale-100"
                                         }`}
                                 >
-                                    <div className="grid lg:grid-cols-2 gap-0">
-                                        <div className="relative p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-green-500/10 to-blue-500/10">
+                                    <div className="grid lg:grid-cols-2 gap-0 m-4">
+                                        <div className="relative p-8 lg:p-12 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500/10 to-blue-500/10">
                                             <div className="relative">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-2xl"></div>
                                                 <Image
-                                                    className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-green-400 shadow-2xl"
+                                                    className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-3xl object-cover border-4 border-green-400 shadow-2xl"
                                                     src={testimonials[currentTestimonial].image || "/placeholder.svg"}
                                                     alt={testimonials[currentTestimonial].name}
                                                     width={500} height={300} />
@@ -143,13 +143,14 @@ const Testimonials = () => {
                                                 </blockquote>
 
                                                 <div className="flex flex-wrap gap-3">
-                                                    <Badge className="bg-green-600 text-white border-green-500 px-4 py-2 text-sm font-semibold">
-                                                        <Trophy className="w-4 h-4 mr-2" />
-                                                        {testimonials[currentTestimonial].results}
-                                                    </Badge>
-                                                    <Badge className="bg-blue-600 text-white border-blue-500 px-4 py-2 text-sm font-semibold">
+                                                    <span className="rounded-sm bg-green-600 text-white border-green-500 px-4 py-2 text-sm font-semibold flex items-center">
+                                                        <Trophy className="w-4 h-4 mr-2 " />
+                                                        <p>{testimonials[currentTestimonial].results}</p>
+                                                    </span>
+
+                                                    <span className="rounded-sm bg-blue-600 text-white border-blue-500 px-4 py-2 text-sm font-semibold">
                                                         ⏱️ {testimonials[currentTestimonial].time}
-                                                    </Badge>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -159,25 +160,29 @@ const Testimonials = () => {
                         </Card>
                     </div>
 
-                    <Button
+
+                    {/* <Button
                         variant="outline"
                         size="icon"
                         className="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-800/90 border-slate-600 hover:bg-slate-700 hover:border-green-400 transition-all duration-300 backdrop-blur-sm w-12 h-12"
                         onClick={prevTestimonial}
                     >
                         <ChevronLeft className="w-6 h-6" />
-                    </Button>
+                    </Button> */}
 
-                    <Button
-                        variant="outline"
-                        size="icon"
-                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-800/90 border-slate-600 hover:bg-slate-700 hover:border-green-400 transition-all duration-300 backdrop-blur-sm w-12 h-12"
-                        onClick={nextTestimonial}
-                    >
-                        <ChevronRight className="w-6 h-6" />
-                    </Button>
+
 
                     <div className="flex justify-center mt-8 space-x-3">
+                        <Button
+                            variant="outline"
+                            size="icon"
+                            className="text-white hover:text-green-400 cursor-pointer left-6 -translate-y-1/3 bg-slate-800/90 border-slate-600 hover:bg-slate-700 hover:border-green-400 transition-all duration-300 backdrop-blur-sm w-12 h-12"
+                            onClick={prevTestimonial}
+                        >
+                            <ChevronLeft className="w-6 h-6" />
+                        </Button>
+
+
                         {testimonials.map((_, index) => (
                             <button
                                 key={index}
@@ -186,6 +191,17 @@ const Testimonials = () => {
                                 onClick={() => goToTestimonial(index)}
                             />
                         ))}
+
+
+                        <Button
+                            variant="outline"
+                            size="icon"
+                            className="text-white hover:text-green-400 cursor-pointer right-6 -translate-y-1/3 bg-slate-800/90 border-slate-600 hover:bg-slate-700 hover:border-green-400 transition-all duration-300 backdrop-blur-sm w-12 h-12"
+                            onClick={nextTestimonial}
+                        >
+                            <ChevronRight className="w-6 h-6" />
+                        </Button>
+
                     </div>
                 </div>
 
