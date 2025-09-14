@@ -8,7 +8,7 @@ const Training = () => {
             <div className="container mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-8 ">
-                        <h2 className="text-4xl lg:text-5xl font-bold">
+                        <h2 className="text-4xl lg:text-5xl font-bold text-center">
                             TREINE DE <span className="text-green-400">ONDE ESTIVER</span>
                         </h2>
                         <p className="text-xl text-black leading-relaxed">
