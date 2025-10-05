@@ -1,8 +1,9 @@
+import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import { Award, Badge, Calendar, Clock, MessageCircle, Play, Target, TrendingUp } from 'lucide-react'
-import React from 'react'
+
 
 const Dashboard = () => {
   return (
