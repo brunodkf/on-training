@@ -57,7 +57,7 @@ export function AppSidebar() {
             <span className="text-white font-bold text-sm">AT</span>
           </div>
           <div>
-            <h2 className="font-bold text-white">ANDERSON'S</h2>
+            <h2 className="font-bold text-white">ANDERSON&apos;s</h2>
             <p className="text-xs text-anderson-green">TRAINING</p>
           </div>
         </div>
