@@ -116,7 +116,35 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Reset mobile zoom / layout shift */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dashboard {
+  width: calc(100svw - 16em);
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    width: calc(100svw - 18em);
   }
 }

@@ -34,6 +34,11 @@ export const metadata: Metadata = {
   },
   authors: [{ name: 'Bruno Furtado', url: 'https://brunodkf.vercel.app' }],
   creator: 'Bruno Furtado',
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
 }
 
 export default function RootLayout({
