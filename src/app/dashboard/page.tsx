@@ -7,7 +7,8 @@ import { Award, Badge, Calendar, Clock, MessageCircle, Play, Target, TrendingUp 
 
 const Dashboard = () => {
   return (
-    <div className="dashboard min-h-screen min-w-screen bg-gray-900 text-white">
+    <div className="dashboard bg-gray-900 text-white">
+      
       {/* Header */}
       <header className="border-b border-gray-800 bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-gray-900/60">
         <div className="flex h-16 items-center px-6">

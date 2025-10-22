@@ -142,7 +142,6 @@ body {
 .dashboard {
   width: calc(100svw - 16em);
 }
-
 @media screen and (max-width: 768px) {
   .dashboard {
     width: calc(100svw - 18em);

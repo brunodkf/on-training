@@ -199,11 +199,12 @@ export default function Hero() {
                             animate={imageControls}
                         />
                         <Image
-                            src="/hero.webp"
+                            src="/heropop.webp"
                             alt="AM PERSONAL TRAINER"
                             width={400}
                             height={400}
                             className="object-contain absolute top-10"
+                              style={{ transform: "scale(1.4)" }}
                             priority
                         />
                     </div>
